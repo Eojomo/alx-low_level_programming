@@ -1,12 +1,10 @@
 #include <stdlib.h>
 #include <time.h>
-/* more headers goes there */
 #include <stdio.h>
-/* betty style doc for function main goes there */
+
 /**
- * main - main function
- *
- * Return: always 0
+ * main - This program assigned a random number to the variable n
+ * Return: Always 0
  */
 int main(void)
 {
@@ -16,10 +14,16 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 	/* your code goes there */
 	if (n > 0)
-		printf("%d is positive", n);
-	else if (n == 0)
-		printf("%d is zero", n);
+	{
+		printf("%d is %s\n", n, "positive");
+	}
 	else if (n < 0)
-		printf("%d is negative", n);
+	{
+		printf("%d is %s\n", n, "negative");
+	}
+	else
+	{
+		printf("%d is %s\n", n, "zero");
+	}
 	return (0);
 }
